@@ -35,7 +35,9 @@ export class UsersListComponent implements OnInit {
   }
 
   pageChanged(event: PageEvent): void {
+    console.log(event);
     let page: number = event.pageIndex + 1;
+    console.log(page);
     this.router.navigate(['./'], { queryParams: { page } });
     this.list(page);
   }
